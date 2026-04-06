@@ -18,7 +18,7 @@ from distribution_regressor import DistributionRegressor
 
 # Učitavanje stvarnih loto podataka iz CSV (bez random/sintetičkih podataka)
 np.random.seed(39)
-csv_path = "/Users/4c/Desktop/GHQ/data/loto7hh_4592_k27.csv"
+csv_path = "/data/loto7hh_4592_k27.csv"
 df = pd.read_csv(csv_path)
 cols = ["Num1", "Num2", "Num3", "Num4", "Num5", "Num6", "Num7"]
 draws = df[cols].values.astype(float)
@@ -91,7 +91,7 @@ for i in range(n_examples):
 plt.suptitle('Predicted Probability Distributions for Individual Test Points', 
              fontsize=14, fontweight='bold')
 plt.tight_layout()
-plt.savefig('/Users/4c/Desktop/GHQ/kurzor/DistributionRegressor-main/examples/distribution_visualization.png', dpi=150, bbox_inches='tight')
+plt.savefig('/distribution_visualization.png', dpi=150, bbox_inches='tight')
 print("✓ Saved visualization to 'distribution_visualization.png'")
 
 # Sample from distributions
@@ -193,5 +193,5 @@ This enables:
 Loto 7/39 - Predikcija sledeće kombinacije
 ============================================================
 Predicted next loto 7/39 combination: 
-[ 5  9 15 20 24 30 35]
+[ 5  9 x y 24 z 35]
 """
